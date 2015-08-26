@@ -1,0 +1,45 @@
+@font-face {
+    font-family: SaucerBB;
+    src: url(fonts/SaucerBB.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url
+}
+
+@font-face {
+    font-family: EngineerHand;
+    src: url(fonts/EngineerHand.ttf);
+}
+
+html {
+    background-image: url(images/blueprint-texture.png);
+    background-color: #00548C;
+    
+}
+
+header {
+    padding: 0px;
+    text-align: center;
+    font-size: 50px;
+    
+    font-family: SaucerBB;
+    color: #303030;
+}
+
+body {
+    color: #333333;
+    font-family: EngineerHand;
+    font-size: 1.5em;
+    max-width: 1000px;
+    margin: auto;
+    float: none;
+}
+
+#main {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, .25);
+}
