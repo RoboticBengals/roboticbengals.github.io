@@ -19,7 +19,7 @@ html {
 }
 
 #bgImageContainer {
-     background-image: url(images/computers_circuits_chip_computer_electronics_transistor_circuit_desktop_2000x1333_hd-wallpaper-729711.jpg);
+     background-image: url(images/bg.png);
     z-index: -1;
     position: fixed;
     top: 0px;
@@ -28,9 +28,10 @@ html {
     height: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    -webkit-filter: blur(3px);
+    -webkit-filter: blur(0px);
     -webkit-background-size: cover;
     -webkit-background-position: center;
+    overflow: hidden;
 }
 
 header {
@@ -83,19 +84,20 @@ header span {
     text-shadow: 2px 2px 25px;
     font-size: 2em;
     text-align: center;
-    background: rgba(50, 50, 50, .4);
+    
     width: 750px;
     margin: auto;
     padding: 25px;
     font-size: 2.5em;
     font-family: 'Lato';
     
-    border-radius: 0px 0px 25px 25px;
+    border: 7px solid rgba(255, 255, 255, .2);
+    border-radius: 0px 0px 10px 10px;
 }
 
 #body_main {
     position: relative;
-    color: #CCCCCC;
+    color: #999999;
     font-family: 'Lato';
     font-size: 1.2em;
     clear: both;
@@ -108,6 +110,19 @@ header span {
     height: 300px;
 }
 
+.blurred-bg {
+    
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .6)
+            ),
+        url(images/bg-blur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 #main {
     max-width: 60%;
     margin: auto;
@@ -117,7 +132,7 @@ header span {
     border: 7px solid rgba(255, 255, 255, .2);
     
     border-radius: 100px;
-    background-color: rgba(0, 0, 0, .5);
+    
     padding: 25px;
     
     margin-top: 50px;
