@@ -71,11 +71,8 @@ header span {
 }
 
 #nav_bar li {
-    display: inline;
+    display: inline-block;
     font-family: 'Lato';
-    
-    border-width: 0px 2px 0px 2px;
-    border-style: solid;
     padding: 7px;
     margin: 10px;
     
@@ -109,6 +106,55 @@ header span {
     
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#nav_bar_anim {
+    
+    display: inline-block;
+    width: 135px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    
+    text-align: center;
+    font-size: .8em;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+#nav_bar_anim a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav_bar_anim svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#nav_bar_anim svg line {
+    stroke-width: 5;
+    stroke: #fff;
+    fill: none;
+    stroke-dasharray: 200;
+    transition: transform .15s ease-in-out;
+}
+
+#nav_bar_anim:hover svg line.left {
+    transform: translateY(-50px);
+}
+
+#nav_bar_anim:hover svg line.right {
+    transform: translateY(50px);
+}
+
+#nav_bar_anim:hover svg line.top {
+    transform: translateX(135px);
+}
+
+#nav_bar_anim:hover svg line.bottom {
+    transform: translateX(-135px);
 }
 
 #body_main {
@@ -154,3 +200,4 @@ header span {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
