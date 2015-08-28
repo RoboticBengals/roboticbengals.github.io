@@ -19,7 +19,7 @@ html {
 }
 
 #bgImageContainer {
-     background-image: url(images/bg.png);
+     background-image: url(images/bg2.png);
     z-index: -1;
     position: fixed;
     top: 0px;
@@ -46,6 +46,9 @@ header {
     
     width: auto;
     height: 130px;
+    
+    border-bottom: 7px solid rgba(255, 255, 255, .2);
+    border-top: 7px solid rgba(255, 255, 255, .2);
 }
 
 header a {
@@ -75,24 +78,37 @@ header span {
     border-style: solid;
     padding: 7px;
     margin: 10px;
+    
 }
 
 #slogan {
     position: relative;
     top: -25px;
-    color: #999999;
-    text-shadow: 2px 2px 25px;
+    
+    color: white;
     font-size: 2em;
     text-align: center;
     
     width: 750px;
     margin: auto;
     padding: 25px;
-    font-size: 2.5em;
-    font-family: 'Lato';
     
-    border: 7px solid rgba(255, 255, 255, .2);
-    border-radius: 0px 0px 10px 10px;
+    
+    border-bottom: 7px solid rgba(255, 255, 255, .2);
+    border-radius: 0px 0px 100px 100px;
+    background: #c9c9c9;
+}
+
+#slogan p{
+    font-size: 1.25em;
+    font-family: 'Lato';
+    background: url(images/bg2-blur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #body_main {
@@ -117,7 +133,7 @@ header span {
             rgba(0, 0, 0, .6),
             rgba(0, 0, 0, .6)
             ),
-        url(images/bg-blur.png);
+        url(images/bg2-blur.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
