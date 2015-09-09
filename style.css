@@ -19,7 +19,7 @@ html {
 }
 
 #bgImageContainer {
-     background-image: url(images/bg2.png);
+    background-image: url(images/bg2.jpg);
     z-index: -2;
     position: fixed;
     top: 0px;
@@ -49,6 +49,15 @@ header {
     
     border-bottom: 7px solid rgba(255, 255, 255, .2);
     border-top: 7px solid rgba(255, 255, 255, .2);
+}
+
+#logo a{
+    height: 100%;
+    width: 100%;
+}
+
+#team_number {
+    color: #999999;   
 }
 
 header span {
@@ -85,9 +94,8 @@ header span {
     text-align: center;
     
     width: 750px;
-    height: 50px;
+    height: 75px;
     margin: auto;
-    padding: 25px;
     
     border-bottom: 7px solid rgba(255, 255, 255, .2);
     border-radius: 0px 0px 100px 100px;
@@ -95,13 +103,16 @@ header span {
 }
 
 #slogan p{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10px 0px;
     font-size: 1.15em;
     font-family: 'Lato';
-    background: url(images/bg2-blur.png);
+    background: url(images/bg2-blur.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 } 
@@ -159,11 +170,10 @@ header span {
 
 #body_main {
     position: relative;
+    top: 150px;
     color: #eeeeee;
     font-family: 'Lato';
     font-size: 1.2em;
-    clear: both;
-    top: 200px;
     height: auto;
 }
 
@@ -179,10 +189,14 @@ header span {
             rgba(0, 0, 0, .6),
             rgba(0, 0, 0, .6)
             ),
-        url(images/bg2-blur.png);
+        url(images/bg2-blur.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+h1 {
+    font-size: 3em;   
 }
 
 a:link {
@@ -213,7 +227,7 @@ a:active {
     
     border: 7px solid rgba(255, 255, 255, .2);
     
-    border-radius: 100px;
+    border-radius: 50px;
     
     padding: 25px;
     
@@ -228,3 +242,77 @@ a:active {
     
 }
 
+#images img {
+    margin: 10px;
+    min-width: 10px;
+    max-width: 500px;
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+#droparea
+{
+    width: 100%;
+    padding: 50px 0px;
+	border: 2px dashed #555;
+	border-radius: 7px;
+}
+
+#footer {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    height: 100px;
+    background: rgba(25, 25, 25, .8);
+    display: table;
+    width: 100%;
+    
+    color: #aaaaaa;
+    font-family: 'Lato';
+    font-size: .75em;
+}
+
+#admin_login {
+}
+
+
+#progress_back {
+    position: relative;
+    top: 25px;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    background: #111111;
+    border-radius: 100px;
+}
+
+#progress_fore {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    
+    border-radius: 100px;
+    background: #aaaaaa;
+}
+
+#footer div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#footer p {
+    padding: 5px;
+}
+
+#footer a {
+    color: inherit;
+}
+
+#footer a:hover {
+    color: #eeeeee;   
+}
