@@ -23,16 +23,18 @@ if (isset($_FILES['image'])) {
     
     
     
-    $file_name = "IMG_" . str_pad($file_count, 4, '0', STR_PAD_LEFT);
+    $file_name = "gallery-photos/2016/IMG_" . str_pad($file_count, 4, '0', STR_PAD_LEFT) . ".png";
     
     ChromePhp::log(str_pad($file_count, 4, '0', STR_PAD_LEFT));
         
-    rename($file_tmp, "gallery-photos/2016/" . $file_name . ".jpg");
-    
+    rename($file_tmp, $file_name);
+    chmod($file_name, 0755);
 //    if (!move_uploaded_file($file_tmp, "/gallery-photos/2016/" . $file_name . ".jpg")) {
 //        ChromePhp::log("ERROR MOVING FILE");   
 //    }
-    
-    
 }
+
+
+header('Location: gallery.html')
+
 ?>

@@ -5,8 +5,9 @@
         <link rel="stylesheet" href="style.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="header.js"></script>
-        
+        <script src="adminlogin.js"></script>
         
         
         <meta charset="utf-8">
@@ -16,24 +17,32 @@
     <section id=bgImageContainer></section>
     <section id="body_main">
         
-        <section id="main" class="blurred-bg">            
-            
-            <div id="droparea">Go ahead, drop some files!
-                <div id="progress_back">
-                    <div id="progress_fore"></div>
-                </div>
-            </div>
-            
-            
-        </section>
+        
         
         <section id="main" class="blurred-bg">
             
-            <h1>2016</h1>
+            <h1>2015 - 2016</h1>
             <br><hr><br>
             <div id="images"></div>
             
         </section>
+        
+        <div id="admin_drop">
+            <section id="main" class="blurred-bg">
+                <div id="droparea">
+                    <p>Drop files here</p>
+                    <p>-or-</p>
+
+                    <input type="file" name="image" id="file_input" multiple>
+                    <input type="submit" value="Upload" id="file_submit">
+                    
+                    <div id="progress_back">
+                        <div id="progress_fore"></div>
+                    </div>
+                </div> 
+
+            </section>
+        </div>
         
         <script src="gallery.js"></script>
     </section>

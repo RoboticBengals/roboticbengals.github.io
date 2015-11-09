@@ -28,10 +28,28 @@ html {
     height: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    -webkit-filter: blur(0px);
+    
+    
+    background-position: center;
+    background-size: cover;
     -webkit-background-size: cover;
-    -webkit-background-position: center;
+    
     overflow: hidden;
+}
+
+.blurred-bg {
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .6)
+            ),
+        url(images/bg2-blur.jpg);
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -99,8 +117,9 @@ header span {
     
     border-bottom: 7px solid rgba(255, 255, 255, .2);
     border-radius: 0px 0px 100px 100px;
-    background: #c9c9c9;
+    background: rgba(0, 0, 0, .65);
 }
+
 
 #slogan p{
     height: 100%;
@@ -109,13 +128,16 @@ header span {
     padding: 10px 0px;
     font-size: 1.15em;
     font-family: 'Lato';
+} 
+
+[if Webkit] #slogan p {
     background: url(images/bg2-blur.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} 
+}
 
 #nav_bar_anim {
     
@@ -182,19 +204,6 @@ header span {
     height: 300px;
 }
 
-.blurred-bg {
-    
-    background: 
-        linear-gradient(
-            rgba(0, 0, 0, .6),
-            rgba(0, 0, 0, .6)
-            ),
-        url(images/bg2-blur.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 h1 {
     font-size: 3em;   
 }
@@ -246,7 +255,7 @@ a:active {
     margin: 10px;
     min-width: 10px;
     max-width: 500px;
-    width: 100%;
+    width: 90%;
     border: 3px solid white;
     border-radius: 10px;
     vertical-align: middle;
@@ -258,6 +267,44 @@ a:active {
     padding: 50px 0px;
 	border: 2px dashed #555;
 	border-radius: 7px;
+}
+
+#droparea * {
+    padding: 10px;   
+}
+
+#droparea input {
+    font-family: 'Lato';
+    color: #eeeeee;
+    background-color: #333333;
+    border: 4px solid #222222;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: .8em;
+    vertical-align: middle;
+}
+
+#progress_back {
+    position: relative;
+    padding: 0px;
+    top: 25px;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    background: #222222;
+    border-radius: 100px;
+}
+
+#progress_fore {
+    position: relative;
+    padding: 0px;
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    
+    border-radius: 100px;
+    background: #aaaaaa;
 }
 
 #footer {
@@ -278,26 +325,7 @@ a:active {
 }
 
 
-#progress_back {
-    position: relative;
-    top: 25px;
-    width: 90%;
-    height: 50px;
-    margin: auto;
-    background: #111111;
-    border-radius: 100px;
-}
 
-#progress_fore {
-    position: relative;
-    top: 10px;
-    left: 10px;
-    height: calc(100% - 20px);
-    width: calc(100% - 20px);
-    
-    border-radius: 100px;
-    background: #aaaaaa;
-}
 
 #footer div {
     display: table-cell;

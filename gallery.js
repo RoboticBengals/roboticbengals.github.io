@@ -8,6 +8,7 @@ function load() {
     
     
     document.getElementById("progress_fore").style.width = "calc(100% - 20px)";
+    document.getElementById("admin_drop").style.display = 'none';
 }
 
 function loadImages(images) {
@@ -85,14 +86,32 @@ function dragndrop() {
         processFileUpload(evt.dataTransfer.files);
     }, false);	
 }
-                    
+      
+
+
+function processFormFileUpload() {
+    
+    var file_input = document.getElementById('file_input');
+    
+    console.log("Processing form file upload. No. files: " + file_input.files.length);
+                
+    if (file_input.files.length != 0) {
+           processFileUpload(file_input.files);
+    }
+}
+
 function processFileUpload(droppedFiles) {
+    console.log("Process file upload: " + droppedFiles[0].name)
+    
     for (var i = 0; i < droppedFiles.length; i++) {
         uploadFile(droppedFiles[i]);
     } 
 }
 
 function uploadFile(file) {
+    
+    console.log("trying to upload: " + file.name);
+    
     var xhr = new XMLHttpRequest();
     
     xhr.upload.onprogress = function(e) {
@@ -102,7 +121,7 @@ function uploadFile(file) {
     }
     
     xhr.upload.onload = function(e) {
-
+        
     }
     
     xhr.upload.onerror = function(e) {
