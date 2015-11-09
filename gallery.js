@@ -8,7 +8,7 @@ function load() {
     
     
     document.getElementById("progress_fore").style.width = "calc(100% - 20px)";
-    document.getElementById("admin_drop").style.display = 'none';
+    //document.getElementById("admin_drop").style.display = 'none';
 }
 
 function loadImages(images) {
@@ -118,14 +118,17 @@ function uploadFile(file) {
         console.log(e.loaded / e.total * 100 + "% uploaded");  
         var percent = e.loaded / e.total * 100
         document.getElementById("progress_fore").style.width = "calc(" + percent + "% - 20px)";
+        document.getElementById("progress_fore").innerHTML = "Please wait...";
     }
     
     xhr.upload.onload = function(e) {
-        
+        console.log("Uploaded successfully!");
+        document.getElementById("progress_fore").innerHTML = "Upload successful!";
     }
     
     xhr.upload.onerror = function(e) {
         console.log("Error uploading file");   
+        document.getElementById("progress_fore").innerHTML = "Upload failure";
     }
     
     var fd = new FormData();
