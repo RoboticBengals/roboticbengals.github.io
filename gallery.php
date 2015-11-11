@@ -7,15 +7,11 @@
 
 
     foreach($files as $file) {
-
-        switch(ltrim(strstr($file, '.'), '.')) {
-
-            case "jpg": case "jpeg":case "png":case "gif":
-
+        if (strpos($file, '_thumb.jpg') !== false) {
                 $result[] = $dir . "/" . $file;
-
         }
     }
+
 
     $resultJson = json_encode($result);
     echo($resultJson);

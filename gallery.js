@@ -8,7 +8,7 @@ function load() {
     
     
     document.getElementById("progress_fore").style.width = "calc(100% - 20px)";
-    //document.getElementById("admin_drop").style.display = 'none';
+    document.getElementById("admin_drop").style.display = 'none';
 }
 
 function loadImages(images) {
@@ -20,7 +20,7 @@ function loadImages(images) {
     for (var i = images.length - 1; i >= 0; i--) {        
         
         var newImageLink = document.createElement("a");
-        newImageLink.setAttribute("href", images[i]);
+        newImageLink.setAttribute("href", images[i].replace("_thumb", ""));
         
         var newImage = document.createElement("img");
         newImage.setAttribute("src", images[i]);
