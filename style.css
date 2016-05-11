@@ -19,7 +19,7 @@ html {
 }
 
 #bgImageContainer {
-    background-image: url(images/bg2.jpg);
+    background-image: url(images/back.jpg);
     z-index: -2;
     position: fixed;
     top: 0px;
@@ -40,16 +40,24 @@ html {
 .blurred-bg {
     background: 
         linear-gradient(
-            rgba(0, 0, 0, .6),
-            rgba(0, 0, 0, .6)
+            rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .45)
             ),
-        url(images/bg2-blur.jpg);
+        url(images/back-blur.jpg);
     
     background-attachment: fixed;
     background-repeat: no-repeat;
     
     background-size: cover;
     background-position: center;
+}
+#body_main {
+    position: relative;
+    top: 150px;
+    color: #eeeeee;
+    font-family: 'Lato';
+    font-size: 1.2em;
+    height: auto;
 }
 
 header {
@@ -58,7 +66,7 @@ header {
     font-size: 50px;
     
     font-family: SaucerBB;
-    color: #CCCCCC;
+    color: #222222;
 
     background-color: rgba(0, 0, 0, .5);
     
@@ -72,10 +80,11 @@ header {
 #logo a{
     height: 100%;
     width: 100%;
+    color: #222222;
 }
 
 #team_number {
-    color: #999999;   
+    color: #999999;
 }
 
 header span {
@@ -107,7 +116,7 @@ header span {
     
     top: 152px;
     
-    color: white;
+    color: #aaaaaa;
     font-size: .75em;
     text-align: center;
     
@@ -155,7 +164,7 @@ header span {
 
 #nav_bar_anim a {
     text-decoration: none;
-    color: white;
+    color: #eeeeee;
     position: relative;
     z-index: 1;
 }
@@ -168,7 +177,7 @@ header span {
 
 #nav_bar_anim svg line {
     stroke-width: 5;
-    stroke: #fff;
+    stroke: #eeeeee;
     fill: none;
     stroke-dasharray: 200;
     transition: transform .15s ease-in-out;
@@ -190,14 +199,7 @@ header span {
     transform: translateX(-135px);
 }
 
-#body_main {
-    position: relative;
-    top: 150px;
-    color: #eeeeee;
-    font-family: 'Lato';
-    font-size: 1.2em;
-    height: auto;
-}
+
 
 #contacts_table {
     width: 100%;
@@ -227,22 +229,22 @@ h1 {
 }
 
 a:link {
-    color: #eeeeee;
+    color: #111111;
     text-decoration: none;
 }
 
 a:visited {
-    color: #eeeeee;
+    color: #111111;
     text-decoration: none;
 }
 
 a:hover {
-    color: #eeeeee;
+    color: #111111;
     text-decoration: none;
 }
 
 a:active {
-    color: #eeeeee;
+    color: #111111;
     text-decoration: none;
 }
 
